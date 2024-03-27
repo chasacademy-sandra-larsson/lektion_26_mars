@@ -1,19 +1,9 @@
 {
   "todos": [
     {
-      "id": "1",
-      "text": "Mata katten",
-      "completed": false
-    },
-    {
-      "id": "2",
-      "text": "Mata khunden",
-      "completed": false
-    },
-    {
-      "id": "3e817849-45ac-45ef-b16a-665c462f4d10",
-      "text": "Städa",
-      "completed": false
+      "id": "2d93bddc-7ad4-4f6d-8ca9-9db355d3cea3",
+      "text": "mata hunden",
+      "completed": true
     }
   ]
 }

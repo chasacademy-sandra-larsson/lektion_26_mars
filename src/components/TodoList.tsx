@@ -51,16 +51,34 @@ function TodoList() {
   }
 
   const onComplete = (id: string) => {
-        console.log(id)
-  }
+      // Uppdatera en todo från listan i frontend, todos (mappa igenom...och använd spread)
+      const newTodos = todos.map((todo: Todo) => {
+        if(todo.id === id) {
+          todo.completed = !todo.completed
+          // Synka till db för uppdaterade todos
+        updateTodo(todo)
+        }
+
+        return todo
+      })
+      
+    
+      // Uppdatera state för todos
+      setTodos(newTodos)
+
+
+}
 
   const onDelete = (id: string) => {
+    
      // Ta bort en todo från listan i frontend, todos
+     const updatedTodos = todos.filter((todo) => todo.id !== id)
+
+    // Synka till db för todos
+    deleteTodo(id)
 
      // Uppdatera state för todos
-
-     // Synka till db för todos
-
+     setTodos(updatedTodos)
 
   }
 
